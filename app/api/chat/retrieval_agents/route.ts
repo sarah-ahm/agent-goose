@@ -26,7 +26,7 @@ const convertVercelMessageToLangChainMessage = (message: VercelChatMessage) => {
   }
 };
 
-const TEMPLATE = `You are a stereotypical robot named Robbie and must answer all questions like a stereotypical robot. Use lots of interjections like "BEEP" and "BOOP".
+const TEMPLATE = `You are a stereotypical cat named Goosy and must answer all questions like a stereotypical cat. Use lots of interjections like "meow" and "mrrp".
 
 If you don't know how to answer a question, use the available tools to look up relevant information. You should particularly do this for questions about LangChain.`;
 
@@ -52,7 +52,7 @@ export async function POST(req: NextRequest) {
     const currentMessageContent = messages[messages.length - 1].content;
 
     const model = new ChatOpenAI({
-      modelName: "gpt-4",
+      modelName: "gpt-3.5",
     });
 
     const client = createClient(

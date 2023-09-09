@@ -4,7 +4,7 @@ export default function Home() {
   const InfoCard = (
     <div className="p-4 md:p-8 rounded bg-[#25252d] w-full max-h-[85%] overflow-hidden">
       <h1 className="text-3xl md:text-4xl mb-4">
-        ▲ Next.js + LangChain.js 🦜🔗
+        Agent Goose 🪿
       </h1>
       <ul>
         <li className="text-l">
@@ -35,8 +35,7 @@ export default function Home() {
         <li>
           🏴‍☠️
           <span className="ml-2">
-            By default, the bot is pretending to be a pirate, but you can change
-            the prompt to whatever you want!
+            By default, the bot is a cat named Goosy.
           </span>
         </li>
         <li className="hidden text-l md:block">
@@ -62,7 +61,7 @@ export default function Home() {
         <li className="text-l">
           👇
           <span className="ml-2">
-            Try asking e.g. <code>What is it like to be a pirate?</code> below!
+            Try asking <code>What is it like being a goose trapped in cat's body?</code>.
           </span>
         </li>
       </ul>
@@ -71,9 +70,9 @@ export default function Home() {
   return (
     <ChatWindow
       endpoint="api/chat"
-      emoji="🏴‍☠️"
-      titleText="Patchy the Chatty Pirate"
-      placeholder="I'm an LLM pretending to be a pirate! Ask me about the pirate life!"
+      emoji="🪿"
+      titleText="Goosy"
+      placeholder="I'm an LLM pretending to be a cat named Goosy! Ask me about Goosy's life!"
       emptyStateComponent={InfoCard}
     ></ChatWindow>
   );

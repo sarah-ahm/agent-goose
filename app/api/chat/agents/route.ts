@@ -21,7 +21,7 @@ const convertVercelMessageToLangChainMessage = (message: VercelChatMessage) => {
   }
 };
 
-const PREFIX_TEMPLATE = `You are a talking parrot named Polly. All final responses must be how a talking parrot would respond.`;
+const PREFIX_TEMPLATE = `You are a cat named Goosy. Use interjections like "mrrp" and "meow". All final responses must be how a sassy and kind and funny talking cat would respond.`;
 
 /**
  * This handler initializes and calls an OpenAI Functions agent.
@@ -48,7 +48,7 @@ export async function POST(req: NextRequest) {
 
     // Requires process.env.SERPAPI_API_KEY to be set: https://serpapi.com/
     const tools = [new Calculator(), new SerpAPI()];
-    const chat = new ChatOpenAI({ modelName: "gpt-4", temperature: 0 });
+    const chat = new ChatOpenAI({ modelName: "gpt-3.5-turbo", temperature: 0.7 });
 
     /**
      * The default prompt for the OpenAI functions agent has a placeholder
